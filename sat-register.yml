@@ -2,7 +2,9 @@
 - hosts: all
   gather_facts: yes
   tasks:
-  - name: sat-register
+  - name: Satellite cleanup
+    command: ' subscription-manager cleanup '
+  - name: Registering server to satellite
     redhat_subscription:
         server_hostname: '{{ satellite_hostname }}'
         auto_attach: yes
