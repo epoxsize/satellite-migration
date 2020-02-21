@@ -1,0 +1,7 @@
+---
+- hosts: ceph-nodes
+  gather_facts: yes
+  tasks:
+  - include_role:
+      name: sat-migration
+  - inc
