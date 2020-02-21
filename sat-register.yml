@@ -6,7 +6,7 @@
     redhat_subscription:
         server_hostname: '{{ satellite_hostname }}'
         auto_attach: yes
-        activationkey: Key8_A
+        activationkey: '{{ activation_key }}'
         consumer_name: '{{ inventory_hostname }}'
         force_register: yes # not required. Register the system even if it is already registered
         state: present # not required. choices: present;absent. whether to register and subscribe (C(present)), or unregister (C(absent)) a system
